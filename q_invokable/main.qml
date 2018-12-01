@@ -6,7 +6,7 @@ Window {
     visible: true
     width: 640
     height: 480
-    title: qsTr("Hello Jagdish")
+    title: qsTr("Hello..!!")
 
     Column {
         Button {
@@ -16,7 +16,7 @@ Window {
             height: 100
             onClicked: {
                 console.log("button has been clicked")
-                var result = datastote.getCount("jagdish");
+                var result = datastote.getCount("jagdish tirumala");
                 console.log("string lenght = "+result)
             }
         }
