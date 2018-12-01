@@ -16,7 +16,7 @@ Window {
             height: 100
             onClicked: {
                 console.log("button has been clicked")
-                var result = datastote.getCount("jagdish");
+                var result = datastote.getCount("jagdish tirumala");
                 console.log("string lenght = "+result)
             }
         }
