@@ -6,7 +6,7 @@ Window {
     visible: true
     width: 640
     height: 480
-    title: qsTr("Mater..!!")
+    title: qsTr("Master..!!")
 
     Column {
         Button {
