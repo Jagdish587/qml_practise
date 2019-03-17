@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>jsfile.js</file>
+        <file>factorial.js</file>
+    </qresource>
+</RCC>
