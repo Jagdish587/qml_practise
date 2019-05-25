@@ -88,6 +88,8 @@ Rectangle {
 
     Image {
         id: id_hin
+        width: 50
+        height: 50
         anchors {
             top: id_vie.bottom
             right: parent.right
