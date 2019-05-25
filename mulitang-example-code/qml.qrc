@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>translator/HelloWorld_JAP.qm</file>
+        <file>translator/HelloWorld_VIE.qm</file>
+        <file>image/England.png</file>
+        <file>image/Japan.png</file>
+        <file>image/Vietnam.png</file>
+        <file>translator/HelloWorld_HIN.ts</file>
+        <file>translator/HelloWorld_HIN.qm</file>
+        <file>image/india.jpg</file>
+    </qresource>
+</RCC>
