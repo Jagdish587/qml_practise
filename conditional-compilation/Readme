@@ -1,0 +1,4 @@
+TO invoke conditional compilation :
+===================================
+QT Creatot -> left side pane , there is projects windows -> Additional arguments -> DEFINES+=ON_UBUNTU 
+based on that defines Defines , it will condional compile in c++ and qml
