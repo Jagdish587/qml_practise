@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>flatstyle.qml</file>
+        <file>imports/Theme/qmldir</file>
+        <file>imports/Theme/Theme.qml</file>
+    </qresource>
+</RCC>
