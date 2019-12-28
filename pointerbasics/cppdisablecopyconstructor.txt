@@ -1,0 +1,30 @@
+	Sometimes it is recommended do disable copy constrctor and assignment operator 
+	like singelton , below is way to achieve it
+
+	https://stackoverflow.com/questions/2173746/how-do-i-make-this-c-object-non-copyable
+
+struct NonCopyable {
+    NonCopyable & operator=(const NonCopyable&) = delete;
+    NonCopyable(const NonCopyable&) = delete;
+    NonCopyable() = default;
+};
+
+for class subclassing QObject , you can use macro Q_DISABLE_COPY and achieve this 
+
+class MyClass : public QObject {
+  Q_OBJECT
+  Q_DISABLE_COPY(MyClass) // See macro below
+  public:
+    QObject() {}
+};
+
+
+#ifdef Q_COMPILER_DELETE_MEMBERS 
+# define Q_DECL_EQ_DELETE = delete
+#else
+# define Q_DECL_EQ_DELETE
+#endif
+
+#define Q_DISABLE_COPY(Class) \
+  Class(const Class &) Q_DECL_EQ_DELETE;\
+  Class &operator=(const Class &) Q_DECL_EQ_DELETE;
