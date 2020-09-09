@@ -8,6 +8,8 @@ Window {
     width: 600
     height: 600
 
+    
+    
     AnimatedImage {
         id: banana
         source: "/files/images/banana.gif"
