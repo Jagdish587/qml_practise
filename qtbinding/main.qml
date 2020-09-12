@@ -1,31 +1,38 @@
-import QtQuick 2.12
-import QtQuick.Window 2.12
+import QtQuick 2.3
+import QtQuick.Window 2.2
+import QtQuick.Controls 2.12
 
 Window {
     visible: true
-    width: 640
-    height: 480
-    title: qsTr("Hello World")
+
+    width: 600
+    height: 600
 
     Rectangle {
-        id: myrect
-        width: 50
+        id: earseme
+        width: 75
         height: width * 2
-        focus: true
-        color: "red"
-        anchors.centerIn: parent
+        x: 50
+        y: 50
+        color: "yellow"
+        radius: 4
 
-        onHeightChanged: {
-            console.log("onHeightChanged = " + height)
+        Component.onCompleted: {
+           earseme.height =  Qt.binding(function() { return earseme.width * 2 })
         }
+
+        MouseArea
+        {
+            anchors.fill: parent
+            onClicked: {
+
+               earseme.width = 50
+
+                console.log("height = "+height)
+
+            }
+        }
+
     }
 
-    Component.onCompleted: {
-        myrect.height = Qt.binding(function () {
-            return myrect.width * 3
-        })
-        console.log("myrect.height = " + myrect.height)
-
-        myrect.width = 75 // now onHeightChanged will be called
-    }
 }
