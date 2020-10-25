@@ -8,7 +8,7 @@ class MyClass : public QObject
 {
   Q_OBJECT
  public:
-  int m_value ;
+  int m_value = 44;
 
   explicit MyClass(QObject *parent = nullptr);
   Q_PROPERTY(int myValue READ getValue WRITE setvalue NOTIFY valueChanged )
@@ -28,15 +28,7 @@ class MyClass : public QObject
 
  signals:
   void valueChanged();
-  explicit MyClass(QObject *parent = nullptr);
-  Q_PROPERTY(int myValue READ getValue)
 
-  int getValue() const
-  {
-    return 20;
-  }
-
- signals:
 
  public slots:
 };

@@ -18,8 +18,12 @@ Window {
         y: 50
 
         Text {
-            id: name
-            text: myobj.myValue
+            id: textbox
+            text: myobj.myValue ? myobj.myValue : ""
+
+            Component.onCompleted: {
+                console.log("myobj.myValue loaded = "+myobj.myValue)
+            }
         }
 
         MouseArea {
@@ -36,5 +40,6 @@ Window {
     Component.onCompleted: {
         console.log("Jagdish calling from qml ")
         myobj.myValue = 22
+
     }
 }
